@@ -1,0 +1,73 @@
+/*\\\\\\\\\\\\\\\\
+\\\\\\ Шрифты \\\\\
+\\\\\\\\\\\\\\\\\*/
+
+/* Inter 400/700/800 */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/inter-400.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/inter-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/inter-900.woff2") format("woff2");
+  font-display: swap;
+}
+
+/*\\\\\\\\\\\\\\\\\\\\\
+\\\ Глобальные стили \\\
+\\\\\\\\\\\\\\\\\\\\\\*/
+:root {
+  --page-background-color: #feafc3;
+}
+
+.page {
+  height: 100%;
+}
+
+.page__body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  min-width: 1366px;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #000000;
+  background-color: var(--page-background-color);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.page__main {
+  flex-grow: 1;
+}
