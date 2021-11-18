@@ -45,6 +45,239 @@
     </header>
 
     <main class="page__main main">
+      <header class="main__header inner-header">
+        <h1 class="inner-header__title section-title">Сливочное мороженое</h1>
+        <ul class="inner-header__breadcrumbs breadcrumbs">
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link link" href="index.html">Главная</a>
+          </li>
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link link" href="javascript:undefined">Каталог</a>
+          </li>
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link link" href="catalog.html" aria-current="page">Сливочное</a>
+          </li>
+        </ul>
+      </header>
+
+      <section class="main__catalog catalog">
+        <h2 class="visually-hidden">Каталог товаров с фильтрами.</h2>
+
+        <form class="catalog__filter filters" action="https://echo.htmlacademy.ru/" method="GET">
+          <h3 class="visually-hidden">Фильтры:</h3>
+          <p class="filters__group">
+            <label class="filters__legend" for="sorting">Сортировка:</label>
+            <select class="filters__select" id="sorting" name="sorting">
+              <option class="filters__option" value="popularity">по популярности</option>
+              <option class="filters__option" value="highestPrice">по цене: сначала дорогие</option>
+              <option class="filters__option" value="lowestPrice">по цене: сначала недорогие</option>
+              <option class="filters__option" value="availability">по наличию</option>
+            </select>
+          </p>
+
+          <p class="filters__group">
+            <label class="filters__legend">Цена: <span>100 &#8381;</span> - <span>500 &#8381;</span></label>
+            <div class="filters__slider range-slider">
+              <input class="range-slider__range" type="range" min="0" max="8300" value="100" step="50" aria-label="Минимальная цена">
+              <input class="range-slider__range" type="range" min="0" max="8300" value="500" step="50" aria-label="Максимальная цена">
+            </div>
+          </p>
+
+          <p class="filters__group">
+            <legend class="filters__legend">Жирность:</legend>
+            <ul class="filters__input-list">
+              <li class="filters__input-item">
+                <input class="filters__radio visually-hidden" type="radio" id="fatness-0" name="fatness" value="0">
+                <label class="filters__label filters__label--radio" for="fatness-0">0%</label>
+              </li>
+              <li class="filters__input-item">
+                <input class="filters__radio visually-hidden" type="radio" id="fatness-10" name="fatness" value="10" checked>
+                <label class="filters__label filters__label--radio" for="fatness-10">до 10%</label>
+              </li>
+              <li class="filters__input-item">
+                <input class="filters__radio visually-hidden" type="radio" id="fatness-30" name="fatness" value="30">
+                <label class="filters__label filters__label--radio" for="fatness-10">до 30%</label>
+              </li>
+              <li class="filters__input-item">
+                <input class="filters__radio visually-hidden" type="radio" id="fatness-100" name="fatness" value="100">
+                <label class="filters__label filters__label--radio" for="fatness-10">выше 30%</label>
+              </li>
+            </ul>
+          </p>
+
+          <p class="filters__group">
+            <legend class="filters__legend">Наполнители:</legend>
+            <ul class="filters__input-list">
+              <li class="filters__input-item">
+                <input class="filters__checkbox visually-hidden" type="checkbox" id="checkbox-chocolate" name="topping" value="chocolate" checked>
+                <label class="filters__label filters__label--checkbox" for="checkbox-chocklate">шоколадные</label>
+              </li>
+              <li class="filters__input-item">
+                <input class="filters__checkbox visually-hidden" type="checkbox" id="checkbox-sugar" name="topping" value="sugar" checked>
+                <label class="filters__label filters__label--checkbox" for="checkbox-sugar">сахарные посыпки</label>
+              </li>
+              <li class="filters__input-item">
+                <input class="filters__checkbox visually-hidden" type="checkbox" id="checkbox-fruits" name="topping" value="fruits">
+                <label class="filters__label filters__label--checkbox" for="checkbox-fruits">фрукты</label>
+              </li>
+              <li class="filters__input-item">
+                <input class="filters__checkbox visually-hidden" type="checkbox" id="checkbox-syrup" name="topping" value="syrup">
+                <label class="filters__label filters__label--checkbox" for="checkbox-syrup">сиропы</label>
+              </li>
+              <li class="filters__input-item">
+                <input class="filters__checkbox visually-hidden" type="checkbox" id="checkbox-jam" name="topping" value="jam">
+                <label class="filters__label filters__label--checkbox" for="checkbox-jam">джемы</label>
+              </li>
+            </ul>
+          </p>
+          <button class="filters__button button" type="submit">Применить</button>
+        </form>
+
+        <section class="catalog__products products">
+          <h3 class="visually-hidden">Список товаров:</h3>
+          <ul class="products__list">
+            <li class="products__item product">
+              <img class="product__image" src="#" alt="Изображение товара.">
+              <h3 class="product__title">Малинка</h3>
+              <p class="product__description">Сливочное мороженое с малиновым джемом</p>
+              <p class="product__price">310 &#8381;/кг</p>
+              <a class="product__link" href="javascript:undefined">
+                <span class="visually-hidden">Добавить товар в корзину.</span>
+              </a>
+            </li>
+            <li class="products__item product">
+              <img class="product__image" src="#" alt="Изображение товара.">
+              <h3 class="product__title">Фисташка</h3>
+              <p class="product__description">Фисташковый пломбир с кусочками шоколада</p>
+              <p class="product__price">340 &#8381;/кг</p>
+              <a class="product__link" href="javascript:undefined">
+                <span class="visually-hidden">Добавить товар в корзину.</span>
+              </a>
+            </li>
+            <li class="products__item product">
+              <img class="product__image" src="#" alt="Изображение товара.">
+              <h3 class="product__title">Черника</h3>
+              <p class="product__description">Крем-брюле с черничным джемом</p>
+              <p class="product__price">330 &#8381;/кг</p>
+              <a class="product__link" href="javascript:undefined">
+                <span class="visually-hidden">Добавить товар в корзину.</span>
+              </a>
+            <li class="products__item product">
+              <img class="product__image" src="#" alt="Изображение товара.">
+              <h3 class="product__title">Бабл-гам</h3>
+              <p class="product__description">Ванильный пломбир со сладкой посыпкой</p>
+              <p class="product__price">320 &#8381;/кг</p>
+              <a class="product__link" href="javascript:undefined">
+                <span class="visually-hidden">Добавить товар в корзину.</span>
+              </a>
+            </li>
+            <li class="products__item product">
+              <img class="product__image" src="#" alt="Изображение товара.">
+              <h3 class="product__title">Ежевика</h3>
+              <p class="product__description">Сливочное мороженое с ежевичным джемом</p>
+              <p class="product__price">330 &#8381;/кг</p>
+              <a class="product__link" href="javascript:undefined">
+                <span class="visually-hidden">Добавить товар в корзину.</span>
+              </a>
+            </li>
+            <li class="products__item product">
+              <img class="product__image" src="#" alt="Изображение товара.">
+              <h3 class="product__title">Банан</h3>
+              <p class="product__description">Сливочный пломбир с банановым вкусом</p>
+              <p class="product__price">340 &#8381;/кг</p>
+              <a class="product__link" href="javascript:undefined">
+                <span class="visually-hidden">Добавить товар в корзину.</span>
+              </a>
+            </li>
+            <li class="products__item product">
+              <img class="product__image" src="#" alt="Изображение товара.">
+              <h3 class="product__title">Шоколадка</h3>
+              <p class="product__description">Классический шоколадный пломбир</p>
+              <p class="product__price">270 &#8381;/кг</p>
+              <a class="product__link" href="javascript:undefined">
+                <span class="visually-hidden">Добавить товар в корзину.</span>
+              </a>
+            </li>
+            <li class="products__item product">
+              <img class="product__image" src="#" alt="Изображение товара.">
+              <h3 class="product__title">Клубничка</h3>
+              <p class="product__description">Сливочный пломбир с клубничным вкусом</p>
+              <p class="product__price">300 &#8381;/кг</p>
+              <a class="product__link" href="javascript:undefined">
+                <span class="visually-hidden">Добавить товар в корзину.</span>
+              </a>
+            </li>
+            <li class="products__item product">
+              <img class="product__image" src="#" alt="Изображение товара.">
+              <h3 class="product__title">Лимон</h3>
+              <p class="product__description">Освежающий лимонный сорбет</p>
+              <p class="product__price">310 &#8381;/кг</p>
+              <a class="product__link" href="javascript:undefined">
+                <span class="visually-hidden">Добавить товар в корзину.</span>
+              </a>
+            </li>
+            <li class="products__item product">
+              <img class="product__image" src="#" alt="Изображение товара.">
+              <h3 class="product__title">Ментол</h3>
+              <p class="product__description">Сливочный пломбир с ментоловым сиропом</p>
+              <p class="product__price">320 &#8381;/кг</p>
+              <a class="product__link" href="javascript:undefined">
+                <span class="visually-hidden">Добавить товар в корзину.</span>
+              </a>
+            </li>
+            <li class="products__item product">
+              <img class="product__image" src="#" alt="Изображение товара.">
+              <h3 class="product__title">Орешек</h3>
+              <p class="product__description">Фисташковый пломбир с шоколадным сиропом</p>
+              <p class="product__price">360 &#8381;/кг</p>
+              <a class="product__link" href="javascript:undefined">
+                <span class="visually-hidden">Добавить товар в корзину.</span>
+              </a>
+            </li>
+            <li class="products__item product">
+              <img class="product__image" src="#" alt="Изображение товара.">
+              <h3 class="product__title">Крем-брюле</h3>
+              <p class="product__description">Классическое крем-брюле</p>
+              <p class="product__price">280 &#8381;/кг</p>
+              <a class="product__link" href="javascript:undefined">
+                <span class="visually-hidden">Добавить товар в корзину.</span>
+              </a>
+            </li>
+          </ul>
+          <a class="products__more-link link" href="javascript:undefined">Показать еще</a>
+        </section>
+
+        <section class="catalog__pagination pagination">
+          <h3 class="visually-hidden">Переход по номерам страниц списка товаров:</h3>
+          <ul class="pagination__list">
+            <li class="pagination__item">
+              <a class="pagination__button pagination__button--prev pagination__button--disabled">
+                <span class="visually-hidden" aria-hidden="true">Перейти на предыдущю страницу.</span>
+              </a>
+            </li>
+            <li class="pagination__item">
+              <a class="pagination__link link" href="catalog.html" aria-current="page">1</a>
+            </li>
+            <li class="pagination__item">
+              <a class="pagination__link link" href="javascript:undefined">2</a>
+            </li>
+            <li class="pagination__item">
+              <a class="pagination__link link" href="javascript:undefined">3</a>
+            </li>
+            <li class="pagination__item">
+              <a class="pagination__link link" href="javascript:undefined">4</a>
+            </li>
+            <li class="pagination__item">
+              <a class="pagination__link link" href="javascript:undefined">5</a>
+            </li>
+            <li class="pagination__item">
+              <a class="pagination__button pagination__button--next link" href="javascript:undefined">
+                <span class="visually-hidden">Перейти на следующую страницу.</span>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </section>
     </main>
 
     <footer class="page__footer footer">
