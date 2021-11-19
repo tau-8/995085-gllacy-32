@@ -71,3 +71,17 @@
 .page__main {
   flex-grow: 1;
 }
+
+/*\\\\\\\\\\\\\\\\
+\\\\\ Обертки \\\\\
+\\\\\\\\\\\\\\\\\*/
+.page__centerer {
+  width: 1170px;
+  margin: 0 auto;
+}
+
+.page__centerer--double {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 30px;
+}

@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="css/styles.css">
   </head>
   <body class="page__body">
-    <header class="page__header header">
+    <header class="header page__header page__centerer">
       <a class="header__logo logo-link" href="index.html" aria-current="page">
         <img class="logo-link__image" src="images/gllacy-logo.svg" width="137" height="56" alt="Логотип интернет-магазина «Глейси».">
       </a>
@@ -62,10 +62,10 @@
       </ul>
     </header>
 
-    <main class="page__main main">
+    <main class="main page__main">
       <h1 class="visually-hidden">Интернет-магазин «Глейси Шоп».</h1>
 
-      <section class="main__slider slider">
+      <section class="slider main__slider page__centerer">
         <h2 class="visually-hidden">Быстрые заказы.</h2>
 
         <div class="slider__buttons slider-controls">
@@ -137,7 +137,7 @@
         </ul>
       </section>
 
-      <section class="main__deals deals">
+      <section class="deals main__deals page__centerer">
         <h2 class="deals__title">Специальные предложения.</h2>
         <strong class="deals__lead">Заказывайте мороженое<br> и получайте подарки!</strong>
         <ul class="deals__list">
@@ -154,7 +154,7 @@
         </ul>
       </section>
 
-      <section class="main__popular popular">
+      <section class="popular main__popular page__centerer">
         <h2 class="popular__title">Популярные вкусы.</h2>
         <strong class="popular__lead">Попробуйте самые популярные<br> вкусы нашего мороженого</strong>
         <ul class="popular__list">
@@ -197,7 +197,7 @@
         </ul>
       </section>
 
-      <section class="main__about about">
+      <section class="about main__about page__centerer">
         <h2 class="about__title">
           <span class="visually-hidden">Наши преимущества.</span>
         </h2>
@@ -222,27 +222,29 @@
         </ul>
       </section>
 
-      <article class="main__article article acticle--topic--serving">
-        <h2 class="article__title">10 способов сервировки фруктовых щербетов к столу</h2>
-        <span class="article__new article__new--visible">Новое в нашем блоге</span>
-      </article>
+      <div class="page__centerer page__centerer--double">
+        <article class="article acticle--topic--serving main__article">
+          <h2 class="article__title">10 способов сервировки фруктовых щербетов к столу</h2>
+          <span class="article__new article__new--visible">Новое в нашем блоге</span>
+        </article>
 
-      <section class="main__subscribtion subscription">
-        <h2 class="visually-hidden">Подпишитесь на рассылку.</h2>
-        <p class="subscription__description">Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-        <form class="subscription__form" action="https://echo.htmlacademy.ru/" method="GET">
-          <label class="subscription__label">
-            <span class="visually-hidden">Ваш email:</span>
-            <input class="subscription__input"
-            type="email"
-            name="subscription-email"
-            placeholder="email@example.com">
-          </label>
-          <button class="subscription__button button" type="submit">Отправить</button>
-        </form>
-      </section>
+        <section class="subscription main__subscribtion">
+          <h2 class="visually-hidden">Подпишитесь на рассылку.</h2>
+          <p class="subscription__description">Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+          <form class="subscription__form" action="https://echo.htmlacademy.ru/" method="GET">
+            <label class="subscription__label">
+              <span class="visually-hidden">Ваш email:</span>
+              <input class="subscription__input"
+              type="email"
+              name="subscription-email"
+              placeholder="email@example.com">
+            </label>
+            <button class="subscription__button button" type="submit">Отправить</button>
+          </form>
+        </section>
+      </div>
 
-      <section class="main__delivery delivery">
+      <section class="delivery main__delivery page__centerer">
         <h2 class="delivery__title">Доставка любимого мороженого на дом</h2>
         <p class="delivery__description">Хочется полакомиться любимым дессертом, но нет времени съездить в магазин? Закажите доставку мороженого на дом, и курьер привезёт вам ваш заказ в течение часа!</p>
         <form class="delivery__form" action="https://echo.htmlacademy.ru/" method="GET">
@@ -274,7 +276,7 @@
         </form>
       </section>
 
-      <section class="main__feedback feedback">
+      <section class="feedback main__feedback page__centerer">
         <h2 class="visually-hidden">Наши контакты.</h2>
         <address class="feedback__contacts contacts">
           <p class="contacts__address">
@@ -290,7 +292,7 @@
       </section>
     </main>
 
-    <footer class="page__footer footer">
+    <footer class="footer page__footer page__centerer">
       <ul class="footer__social social-links">
         <li class="social-links__item">
           <a href="javascript:undefined" class="social-links__link">
