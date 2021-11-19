@@ -458,6 +458,84 @@
   list-style-type: none;
 }
 
+/* Преимущества */
+.main__about {
+  margin-bottom: 80px;
+}
+
+.about {
+  position: relative;
+  background: repeat url("../images/bgrounds/wafer-ptrn.jpg") 10px 2px / 108px 106px;
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.about__content {
+  padding: 56px 40px;
+  background-color: var(--bright-bg);
+  border-radius: 16px;
+}
+
+.about__lead {
+  display: block;
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.about__advantages {
+  margin: 0;
+}
+
+.advantages {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 31px;
+  row-gap: 40px;
+  padding: 0;
+  list-style-type: none;
+}
+
+.advantages__item {
+  display: flex;
+  column-gap: 16px;
+}
+
+.advantages__item::before {
+  content: "";
+  flex-shrink: 0;
+  display: block;
+  width: 48px;
+  height: 48px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 2px solid var(--main-txt);
+  border-radius: 24px;
+}
+
+.advantages__item--tech::before {
+  background-image: url("../images/icons/ice-cream.svg");
+  background-size: 32px;
+}
+
+.advantages__item--supply::before {
+  background-image: url("../images/icons/cow.svg");
+  background-size: 32px;
+}
+
+.advantages__item--ingredient::before {
+  background-image: url("../images/icons/leaf.svg");
+  background-size: 32px;
+}
+
+.advantages__item--transport::before {
+  background-image: url("../images/icons/thermometer.svg");
+  background-size: 32px;
+}
+
+.advantages__info {
+  margin: 0;
+}
+
 /*\\\\\\\\\\\\\\\\
 \\\\ Внутренняя \\\
 \\\\\\\\\\\\\\\\\*/
