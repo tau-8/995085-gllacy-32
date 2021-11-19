@@ -33,6 +33,7 @@
 :root {
   --main-bg: #feafc3;
   --special-bg: #ff7799;
+  --button-bg: #ff2f64;
   --bright-bg: #fcfcfc;
   --bright-bg-transp: rgba(252, 252, 252, 0.3);
   --main-txt: #2d3440;
@@ -74,8 +75,8 @@
 }
 
 .lead {
-  font-size: 32px;
   font-weight: 900;
+  font-size: 32px;
   line-height: 46px;
 }
 
@@ -85,8 +86,8 @@
 }
 
 .button {
-  font-size: 16px;
   font-weight: 700;
+  font-size: 16px;
   line-height: 20px;
   display: block;
   width: fit-content;
@@ -369,8 +370,8 @@
 .slide__slogan {
   grid-area: slogan;
   align-self: end;
-  font-size: 36px;
   font-weight: 900;
+  font-size: 36px;
   line-height: 46px;
 }
 
@@ -436,6 +437,100 @@
   margin: 0;
   margin-bottom: 30px;
   padding-right: 180px;
+}
+
+/* Популярные вкусы */
+.main__popular {
+  margin-bottom: 80px;
+}
+
+.popular__lead {
+  display: block;
+  text-align: center;
+  margin-bottom: 107px;
+}
+
+.popular__list {
+  display: flex;
+  column-gap: 30px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/*\\\\\\\\\\\\\\\\
+\\\\ Внутренняя \\\
+\\\\\\\\\\\\\\\\\*/
+.product {
+  position: relative;
+  width: 270px;
+  padding: 133px 40px 28px 40px;
+  color: var(--main-txt);
+  background-color: var(--bright-bg);
+  border-radius: 8px;
+}
+
+.product__image {
+  position: absolute;
+  transform: translateX(-50%);
+  top: -51px;
+  left: 50%;
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 100px;
+  filter: drop-shadow(0 4px 12px rgba(45, 52, 64, 0.1));
+  overflow: hidden;
+}
+
+.product__title {
+  margin: 0;
+  margin-bottom: 8px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.product__description {
+  margin: 0;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.product__price {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.product__link {
+  position: absolute;
+  bottom: 24px;
+  right: 40px;
+  display: block;
+  width: 32px;
+  height: 32px;
+  background: var(--button-bg) no-repeat url("../images/icons/cart-white.svg") center / 15px;
+  background-position: center;
+  border-radius: 30px;
+}
+
+.product__link::before {
+  z-index: 1;
+  position: absolute;
+  content: "";
+  width: 50px;
+  height: 50px;
+  top: -9px;
+  left: -9px;
+  border-radius: 25px;
+}
+
+.product__link:hover {
+  background-color: var(--bright-bg);
+  background-image: url("../images/icons/cart.svg");
+  border: 2px solid var(--button-bg);
 }
 
 /*\\\\\\\\\\\\\\\\
