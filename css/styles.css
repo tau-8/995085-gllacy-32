@@ -27,11 +27,22 @@
   font-display: swap;
 }
 
-/*\\\\\\\\\\\\\\\\\\\\\
-\\\ Глобальные стили \\\
-\\\\\\\\\\\\\\\\\\\\\\*/
+/*\\\\\\\\\\\\\\\
+\\\ Глобальные \\\
+\\\\\\\\\\\\\\\\*/
 :root {
-  --page-background-color: #feafc3;
+  --main-bg-1: #feafc3;
+  --main-bg-2: #69a9ff;
+  --main-bg-3: #fcc850;
+  --bright-bg: #fcfcfc;
+  --bright-bg-transp: rgba(252, 252, 252, 0.3);
+  --main-txt: #2d3440;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 .page {
@@ -48,8 +59,8 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
-  color: #000000;
-  background-color: var(--page-background-color);
+  color: var(--main-txt);
+  background-color: var(--main-bg-1);
 }
 
 .visually-hidden {
@@ -84,4 +95,115 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 30px;
+}
+
+/*\\\\\\\\\\\\\\\\
+\\\ Шапка сайта \\\
+\\\\\\\\\\\\\\\\\*/
+.header {
+  display: flex;
+  align-items: center;
+  min-height: 104px;
+}
+
+.logo-link__image {
+  display: block;
+}
+
+.header__navigation {
+  margin-left: 16px;
+}
+
+.site-navigation__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.site-navigation__link {
+  min-width: 36px;
+  min-height: 36px;
+  padding: 8px 16px;
+  line-height: 20px;
+  border-radius: 18px;
+}
+
+.site-navigation__dropdown {
+  margin: 0;
+}
+
+.dropdown {
+  display: none;
+  padding: 16px;
+  font-size: 14px;
+  line-height: 20px;
+  background-color: var(--bright-bg);
+  list-style-type: none;
+}
+
+.dropdown--visible {
+  display: block;
+}
+
+.dropdown__item--special {
+  border-bottom: 1px solid #b9b9b9;
+}
+
+.dropdown__link {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.header__phone {
+  margin-left: auto;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.header__user-menu {
+  margin: 0;
+  margin-left: 18px;
+}
+
+.user-menu {
+  display: flex;
+  column-gap: 16px;
+  padding: 0;
+  list-style-type: none;
+}
+
+.user-menu__link {
+  display: flex;
+  align-items: center;
+  column-gap: 6px;
+  min-width: 32px;
+  min-height: 32px;
+  padding: 6px 16px;
+  font-size: 14px;
+  line-height: 20px;
+  background-color: var(--bright-bg-transp);
+  border-radius: 16px;
+}
+
+.user-menu__link::before {
+  content: "";
+  height: 18px;
+  width: 18px;
+}
+
+.user-menu__link--search {
+  padding: 6px;
+}
+
+.user-menu__link--search::before {
+  background: no-repeat url("../images/icons/search.svg") center / 15px;
+}
+
+.user-menu__link--login::before {
+  background: no-repeat url("../images/icons/log-in.svg") center / 15px;
+}
+
+.user-menu__link--cart::before {
+  background: no-repeat url("../images/icons/cart.svg") center / 15px;
 }
