@@ -31,9 +31,7 @@
 \\\ Глобальные \\\
 \\\\\\\\\\\\\\\\*/
 :root {
-  --main-bg-1: #feafc3;
-  --main-bg-2: #69a9ff;
-  --main-bg-3: #fcc850;
+  --main-bg: #feafc3;
   --bright-bg: #fcfcfc;
   --bright-bg-transp: rgba(252, 252, 252, 0.3);
   --main-txt: #2d3440;
@@ -60,7 +58,7 @@
   font-size: 16px;
   line-height: 22px;
   color: var(--main-txt);
-  background-color: var(--main-bg-1);
+  background-color: var(--main-bg);
 }
 
 .visually-hidden {
@@ -77,6 +75,33 @@
 .link {
   text-decoration: none;
   color: inherit;
+}
+
+.button {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  width: fit-content;
+  padding: 8px 28px;
+  color: var(--main-txt);
+  background: none;
+  background-color: var(--bright-bg);
+  background-clip: padding-box;
+  border: 4px solid rgba(252, 252, 252, 0.4);
+  border-radius: 30px;
+  box-shadow: 0 4px 12px rgba(45, 52, 64, 0.1);
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--bright-bg-transp);
+  border-color: var(--bright-bg);
+  box-shadow: 0 4px 15px rgba(133, 133, 133, 0.15);
+}
+
+.button:active {
+  transform: translateY(2px);
+  opacity: 0.7;
 }
 
 .page__main {
@@ -206,4 +231,174 @@
 
 .user-menu__link--cart::before {
   background: no-repeat url("../images/icons/cart.svg") center / 15px;
+}
+
+/*\\\\\\\\\\\\\\\\
+\\\\\ Главная \\\\\
+\\\\\\\\\\\\\\\\\*/
+
+/* Слайдер */
+.slider {
+  position: relative;
+}
+
+.slider__buttons {
+  position: absolute;
+  transform: translateY(-50%);
+  left: 542px;
+  top: 50%;
+}
+
+.slider-controls {
+  display: flex;
+  column-gap: 274px;
+}
+
+.slider-controls__button {
+  width: 38px;
+  height: 38px;
+  background: var(--bright-bg-transp) no-repeat url("../images/icons/arrow-head-white.svg") 15px center / 7px 11px;
+  border: 2px solid var(--bright-bg);
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.slider-controls__button--previous {
+  transform: rotate(180deg);
+}
+
+.slider__pagination {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+}
+
+.dot-pagination {
+  display: flex;
+  column-gap: 8px;
+  padding: 0;
+  list-style-type: none;
+}
+
+.dot-pagination__button {
+  width: 12px;
+  height: 12px;
+  background-color: var(--bright-bg-transp);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.dot-pagination__button--current {
+  background-color: var(--bright-bg);
+}
+
+.slider__social {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 0;
+}
+
+.slider__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.slider__item {
+  display: none;
+}
+
+.slider__item--current {
+  display: block;
+}
+
+.slide {
+  padding-left: 70px;
+}
+
+.slide__grid {
+  display: grid;
+  align-items: start;
+  grid-template-columns: 491px 312px;
+  grid-template-rows: minmax(228px, auto) minmax(140px, auto) minmax(186px, auto);
+  grid-template-areas:
+    "slogan image"
+    "info image"
+    "button image";
+}
+
+.slide__wrapper {
+  position: relative;
+  grid-area: image;
+  align-self: center;
+}
+
+.slide__wrapper::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  transform: translateY(-50%);
+  width: 312px;
+  height: 312px;
+  top: 50%;
+  left: 0;
+  background-color: rgba(252, 252, 252, 0.35);
+  border-radius: 160px;
+}
+
+.slide__image {
+  max-width: 100%;
+  height: auto;
+}
+
+.slide__slogan {
+  grid-area: slogan;
+  align-self: end;
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 46px;
+}
+
+.slide__info {
+  grid-area: info;
+  margin-right: 88px;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.slide__button {
+  grid-area: button;
+}
+
+/*\\\\\\\\\\\\\\\\
+\\\ Футер сайта \\\
+\\\\\\\\\\\\\\\\\*/
+.social-links {
+  display: flex;
+  column-gap: 16px;
+  padding: 0;
+  list-style-type: none;
+}
+
+.social-links__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 28px;
+  height: 28px;
+  background-color: var(--bright-bg);
+  background-clip: padding-box;
+  border: 2px solid rgba(252, 252, 252, 0.2);
+  border-radius: 20px;
+}
+
+.social-links__icon {
+  fill: var(--main-bg);
+}
+
+.social-links__link:hover .social-links__icon {
+  fill: var(--main-txt);
 }
