@@ -32,6 +32,7 @@
 \\\\\\\\\\\\\\\\*/
 :root {
   --main-bg: #feafc3;
+  --special-bg: #ff7799;
   --bright-bg: #fcfcfc;
   --bright-bg-transp: rgba(252, 252, 252, 0.3);
   --main-txt: #2d3440;
@@ -72,6 +73,12 @@
   clip: rect(0 0 0 0);
 }
 
+.lead {
+  font-size: 32px;
+  font-weight: 900;
+  line-height: 46px;
+}
+
 .link {
   text-decoration: none;
   color: inherit;
@@ -81,6 +88,7 @@
   font-size: 16px;
   font-weight: 700;
   line-height: 20px;
+  display: block;
   width: fit-content;
   padding: 8px 28px;
   color: var(--main-txt);
@@ -238,6 +246,10 @@
 \\\\\\\\\\\\\\\\\*/
 
 /* Слайдер */
+.main__slider {
+  margin-bottom: 80px;
+}
+
 .slider {
   position: relative;
 }
@@ -364,6 +376,8 @@
 
 .slide__info {
   grid-area: info;
+  margin: 0;
+  margin-top: 24px;
   margin-right: 88px;
   font-size: 18px;
   line-height: 24px;
@@ -371,6 +385,57 @@
 
 .slide__button {
   grid-area: button;
+}
+
+/* Специальные предложения */
+.main__deals {
+  margin-bottom: 80px;
+}
+
+.deals__lead {
+  display: block;
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.deals__list {
+  display: flex;
+  column-gap: 30px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.deal {
+  padding: 40px 40px 38px 40px;
+  background-color: var(--special-bg);
+  background-repeat: no-repeat;
+  border-radius: 16px;
+}
+
+.deal[data-deal-number="01"] {
+  background-image: url("../images/bgrounds/deal-bg-01.png");
+  background-size: 181px 284px;
+  background-position: 380px 30px;
+}
+
+.deal[data-deal-number="02"] {
+  background-image: url("../images/bgrounds/deal-bg-02.png");
+  background-size: 232px 359px;
+  background-position: 335px 30px;
+}
+
+.deal__title {
+  margin: 0;
+  margin-bottom: 16px;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.deal__description {
+  margin: 0;
+  margin-bottom: 30px;
+  padding-right: 180px;
 }
 
 /*\\\\\\\\\\\\\\\\
