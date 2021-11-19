@@ -2,7 +2,7 @@
 \\\\\\ Шрифты \\\\\
 \\\\\\\\\\\\\\\\\*/
 
-/* Inter 400/700/800 */
+/* Inter 400/700/900 */
 @font-face {
   font-family: "Inter";
   font-style: normal;
@@ -534,6 +534,45 @@
 
 .advantages__info {
   margin: 0;
+}
+
+/* Блок статей */
+.main__article {
+  margin-bottom: 76px;
+}
+
+.article {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 570px;
+  height: 220px;
+  padding: 32px;
+  border-radius: 16px;
+  background: #ffffff no-repeat url("../images/bgrounds/article-bg-001.jpg") center / 570px 220px;
+}
+
+.article__title {
+  margin: 0;
+  padding-right: 203px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.article__new {
+  margin: 0;
+  margin-bottom: 13px;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.article__link {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
 }
 
 /*\\\\\\\\\\\\\\\\
