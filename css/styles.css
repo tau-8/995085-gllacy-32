@@ -765,6 +765,57 @@
   flex-shrink: 0;
 }
 
+/* Форма обратной связи */
+.feedback {
+  width: 1170px;
+  height: 492px;
+  padding: 64px;
+  background: no-repeat url("../images/bgrounds/feedback-bg.jpg") center / 1170px 492px;
+  border-radius: 16px;
+}
+
+.feedback__content {
+  width: 343px;
+  padding: 40px 40px 40px 40px;
+  background-color: var(--bright-bg);
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(45, 52, 64, 0.12);
+}
+
+.contacts {
+  font-style: normal;
+}
+
+.contacts__group {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.contacts__group + .contacts__group {
+  margin-top: 24px;
+  margin-bottom: 30px;
+}
+
+.contacts__address,
+.contacts__phone {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.contacts__info {
+  margin-bottom: 12px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.contacts__misc {
+  font-size: 14px;
+  line-height: 20px;
+}
+
 /*\\\\\\\\\\\\\\\\
 \\\\ Внутренняя \\\
 \\\\\\\\\\\\\\\\\*/
