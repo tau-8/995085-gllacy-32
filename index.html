@@ -273,34 +273,35 @@
       </div>
 
       <section class="delivery main__delivery page__centerer">
-        <h2 class="delivery__title">Доставка любимого мороженого на дом</h2>
-        <p class="delivery__description">Хочется полакомиться любимым дессертом, но нет времени съездить в магазин? Закажите доставку мороженого на дом, и курьер привезёт вам ваш заказ в течение часа!</p>
-        <form class="delivery__form" action="https://echo.htmlacademy.ru/" method="GET">
-          <p class="delivery__info">Укажите адрес и дату доставки, и мы свяжемся с вами, чтобы подтвердить заказ.</p>
-          <p class="delivery__inputs">
-            <label class="delivery__label">
+        <h2 class="delivery__title lead">Доставка любимого мороженого на дом</h2>
+        <p class="delivery__info">Хочется полакомиться любимым дессертом, но нет времени съездить в магазин? Закажите доставку мороженого на дом, и курьер привезёт вам ваш заказ в течение часа!</p>
+        <form class="delivery__form delivery-form" action="https://echo.htmlacademy.ru/" method="GET">
+          <p class="delivery-form__info">Укажите адрес и дату доставки, и мы свяжемся с вами, чтобы подтвердить заказ.</p>
+          <p class="delivery-form__inputs">
+            <label class="delivery-form__label">
               <span>Дата</span>
-              <input class="delivery__input"
-              type="date"
-              name="delivery-date"
+              <input class="delivery-form__input"
+              type="text" onfocus="(this.type='date')" onblur="(this.type='text')"
+              name="delivery-form-date"
               placeholder="01.04.2020">
             </label>
-            <label class="delivery__label">
+            <label class="delivery-form__label">
               <span>Телефон</span>
-              <input class="delivery__input"
+              <input class="delivery-form__input"
               type="tel"
-              name="delivery-phone"
+              name="delivery-form-phone"
               placeholder="+7 800 999-00-00"
               required>
             </label>
-            <label class="delivery__label">
+            <label class="delivery-form__label delivery-form__label--address">
               <span>Адрес</span>
-              <textarea class="delivery__input"
-              name="delivery-address"
-              placeholder="ул. Большая Конюшенная, 19/8"></textarea>
+              <input class="delivery-form__input"
+              type="text"
+              name="delivery-form-address"
+              placeholder="ул. Большая Конюшенная, 19/8">
             </label>
           </p>
-          <button class="delivery__button button" type="submit">Отправить</button>
+          <button class="delivery-form__button button button--inverted" type="submit">Отправить</button>
         </form>
       </section>
 
