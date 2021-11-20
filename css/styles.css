@@ -894,9 +894,22 @@
 /*\\\\\\\\\\\\\\\\
 \\\ Футер сайта \\\
 \\\\\\\\\\\\\\\\\*/
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  column-gap: 100px;
+  padding-top: 46px;
+  padding-bottom: 48px;
+}
+
+.footer__social {
+  margin: 0;
+}
+
 .social-links {
   display: flex;
-  column-gap: 16px;
+  column-gap: 12px;
   padding: 0;
   list-style-type: none;
 }
@@ -919,4 +932,48 @@
 
 .social-links__link:hover .social-links__icon {
   fill: var(--main-txt);
+}
+
+.footer__menu {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(auto-fit, auto);
+  column-gap: 24px;
+  row-gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.footer__menu-link {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.footer__menu-link--special {
+  position: relative;
+  font-weight: 700;
+}
+
+.footer__menu-link--special::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -24px;
+  width: 20px;
+  height: 20px;
+  background: no-repeat url("../images/icons/heart-fill.svg") center / 16px;
+}
+
+.footer__devs {
+  flex-shrink: 0;
+}
+
+.devs-link {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.devs-link span {
+  text-decoration: underline;
 }
