@@ -473,7 +473,7 @@
 .popular__lead {
   display: block;
   text-align: center;
-  margin-bottom: 107px;
+  margin-bottom: 55px;
 }
 
 .popular__list {
@@ -880,8 +880,14 @@
 }
 
 /* Фильтры каталога */
+.catalog {
+  position: relative;
+  padding-bottom: 76px;
+  border-bottom: 1px solid var(--bright-bg-transp);
+}
+
 .catalog__filters {
-  margin-bottom: 98px;
+  margin-bottom: 47px;
 }
 
 .filters {
@@ -1095,7 +1101,12 @@
 
 /* Сетка товаров каталога */
 .products__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 30px;
+  row-gap: 40px;
   margin: 0;
+  margin-bottom: 53px;
   padding: 0;
   list-style-type: none;
 }
@@ -1103,6 +1114,7 @@
 .product {
   position: relative;
   width: 270px;
+  margin-top: 51px;
   padding: 133px 40px 28px 40px;
   color: var(--main-txt);
   background-color: var(--bright-bg);
@@ -1138,9 +1150,11 @@
 }
 
 .product__price {
+  margin: 0;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
+  word-spacing: 3px;
 }
 
 .product__link {
@@ -1170,6 +1184,76 @@
   background-color: var(--bright-bg);
   background-image: url("../images/icons/cart.svg");
   border: 2px solid var(--button-bg);
+}
+
+.products__more-link {
+  margin: 0 auto;
+}
+
+.catalog__pagination {
+  position: absolute;
+  bottom: 90px;
+  right: 0;
+}
+
+.pagination__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 194px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.pagination__item:first-child {
+  margin-right: 20px;
+}
+
+.pagination__item:last-child {
+  margin-left: 20px;
+}
+
+.pagination__button {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: no-repeat url("../images/icons/arrow-head.svg") 10px / 7px;
+}
+
+.pagination__button--prev {
+  transform: rotate(180deg);
+}
+
+.pagination__button--disabled {
+  opacity: 0.2;
+}
+
+.pagination__button:hover:not(.pagination__button--disabled) {
+  background-color: var(--bright-bg-transp);
+  outline: 1px solid var(--bright-bg);
+  border-radius: 15px;
+}
+
+.pagination__link {
+  display: block;
+  width: 24px;
+  height: 24px;
+  padding: 2px 8px;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+}
+
+.pagination__link[aria-current="page"] {
+  background-color: var(--bright-bg);
+  border-radius: 15px;
+}
+
+.pagination__link:hover {
+  background-color: var(--bright-bg-transp);
+  outline: 1px solid var(--bright-bg);
+  border-radius: 15px;
 }
 
 /*\\\\\\\\\\\\\\\\
