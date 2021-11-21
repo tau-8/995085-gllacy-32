@@ -76,6 +76,12 @@
   clip: rect(0 0 0 0);
 }
 
+.main-title {
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 46px;
+}
+
 .lead {
   font-weight: 900;
   font-size: 32px;
@@ -176,6 +182,11 @@
   padding: 8px 16px;
   line-height: 20px;
   border-radius: 18px;
+}
+
+.site-navigation__link--current {
+  color: var(--bright-bg);
+  background-color: #ff4a78;
 }
 
 .site-navigation__dropdown {
@@ -819,6 +830,55 @@
 /*\\\\\\\\\\\\\\\\
 \\\\ Внутренняя \\\
 \\\\\\\\\\\\\\\\\*/
+.inner-header {
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+  margin-bottom: 40px;
+}
+
+.inner-header__title {
+  margin: 0;
+}
+
+.inner-header__breadcrumbs {
+  order: -1;
+  margin: 0;
+  margin-bottom: 17px;
+}
+
+.breadcrumbs {
+  display: flex;
+  column-gap: 26px;
+  padding: 0;
+  list-style-type: none;
+}
+
+.breadcrumbs__link {
+  padding: 1px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.breadcrumbs__item {
+  position: relative;
+}
+
+.breadcrumbs__item + .breadcrumbs__item::before {
+  position: absolute;
+  content: "";
+  top: 6px;
+  left: -19px;
+  width: 12px;
+  height: 12px;
+  background: no-repeat url("../images/icons/chevron.svg") center / 12px;
+}
+
+.breadcrumbs__link:not([aria-current="page"]) {
+  border-bottom: 1px solid var(--main-txt);
+}
+
 .product {
   position: relative;
   width: 270px;
