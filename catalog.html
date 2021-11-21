@@ -81,25 +81,45 @@
       <section class="catalog main__catalog page__centerer">
         <h2 class="visually-hidden">Каталог товаров с фильтрами.</h2>
 
-        <form class="catalog__filter filters" action="https://echo.htmlacademy.ru/" method="GET">
+        <form class="catalog__filters filters" action="https://echo.htmlacademy.ru/" method="GET">
           <h3 class="visually-hidden">Фильтры:</h3>
-          <p class="filters__group">
-            <label class="filters__legend" for="sorting">Сортировка:</label>
+          <fieldset class="filters__group">
+            <legend class="filters__legend" for="sorting">Сортировка:</legend>
             <select class="filters__select" id="sorting" name="sorting">
               <option class="filters__option" value="popularity">по популярности</option>
               <option class="filters__option" value="highestPrice">по цене: сначала дорогие</option>
               <option class="filters__option" value="lowestPrice">по цене: сначала недорогие</option>
               <option class="filters__option" value="availability">по наличию</option>
             </select>
-          </p>
-          <p class="filters__group">
-            <label class="filters__legend">Цена: <span>100 &#8381;</span> - <span>500 &#8381;</span></label>
-            <div class="filters__slider range-slider">
-              <input class="range-slider__range" type="range" min="0" max="1000" value="100" step="50" aria-label="Минимальная цена">
-              <input class="range-slider__range" type="range" min="0" max="1000" value="500" step="50" aria-label="Максимальная цена">
+          </fieldset>
+          <fieldset class="filters__group">
+            <legend class="filters__legend">Цена:</legend>
+            <div class="filters__range range-slider">
+              <p class="range-slider__fields">
+                <label class="visually-hidden" for="price-min">Изменить минимальную цену.</label>
+                <input class="range-slider__input"
+                type="number" id="price-min"
+                name="price-min"
+                value="100"
+                onkeyup="this.style.width = this.value.length + 'ch';">
+                <span>&#8381; -</span>
+                <label class="visually-hidden" for="price-max">Изменить максимальную цену.</label>
+                <input class="range-slider__input"
+                type="number" id="price-max"
+                name="price-max"
+                value="500"
+                onkeyup="this.style.width = this.value.length + 'ch';">
+                <span>&#8381;</span>
+              </p>
+              <div class="range-slider__scale">
+                <div class="range-slider__bar">
+                  <button class="range-slider__toggle range-slider__toggle--min" type="button" aria-hidden="true"></button>
+                  <button class="range-slider__toggle range-slider__toggle--max" type="button" aria-hidden="true"></button>
+                </div>
+              </div>
             </div>
-          </p>
-          <p class="filters__group">
+          </fieldset>
+          <fieldset class="filters__group">
             <legend class="filters__legend">Жирность:</legend>
             <ul class="filters__input-list">
               <li class="filters__input-item">
@@ -112,20 +132,20 @@
               </li>
               <li class="filters__input-item">
                 <input class="filters__radio visually-hidden" type="radio" id="fatness-30" name="fatness" value="30">
-                <label class="filters__label filters__label--radio" for="fatness-10">до 30%</label>
+                <label class="filters__label filters__label--radio" for="fatness-30">до 30%</label>
               </li>
               <li class="filters__input-item">
                 <input class="filters__radio visually-hidden" type="radio" id="fatness-100" name="fatness" value="100">
-                <label class="filters__label filters__label--radio" for="fatness-10">выше 30%</label>
+                <label class="filters__label filters__label--radio" for="fatness-100">выше 30%</label>
               </li>
             </ul>
-          </p>
-          <p class="filters__group">
+          </fieldset>
+          <fieldset class="filters__group">
             <legend class="filters__legend">Наполнители:</legend>
             <ul class="filters__input-list">
               <li class="filters__input-item">
                 <input class="filters__checkbox visually-hidden" type="checkbox" id="checkbox-chocolate" name="topping" value="chocolate" checked>
-                <label class="filters__label filters__label--checkbox" for="checkbox-chocklate">шоколадные</label>
+                <label class="filters__label filters__label--checkbox" for="checkbox-chocolate">шоколадные</label>
               </li>
               <li class="filters__input-item">
                 <input class="filters__checkbox visually-hidden" type="checkbox" id="checkbox-sugar" name="topping" value="sugar" checked>
@@ -144,7 +164,7 @@
                 <label class="filters__label filters__label--checkbox" for="checkbox-jam">джемы</label>
               </li>
             </ul>
-          </p>
+          </fieldset>
           <button class="filters__button button" type="submit">Применить</button>
         </form>
 

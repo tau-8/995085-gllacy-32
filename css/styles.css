@@ -879,6 +879,227 @@
   border-bottom: 1px solid var(--main-txt);
 }
 
+/* Фильтры каталога */
+.catalog__filters {
+  margin-bottom: 98px;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 24px;
+  row-gap: 16px;
+  width: 810px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.filters__group {
+  position: relative;
+  display: grid;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.filters__legend {
+  padding: 0;
+  padding-left: 16px;
+  margin-bottom: 8px;
+}
+
+.filters__input-list {
+  display: flex;
+  column-gap: 17px;
+  min-height: 36px;
+  margin: 0;
+  padding: 8px 16px;
+  background-color: var(--bright-bg-transp);
+  border-radius: 20px;
+  list-style-type: none;
+}
+
+.filters__select {
+  width: 196px;
+  height: 36px;
+  padding: 8px 16px;
+  font: inherit;
+  color: inherit;
+  background-color: var(--bright-bg-transp);
+  border: none;
+  border-radius: 20px;
+  appearance: none;
+}
+
+.range-slider {
+  width: 196px;
+  height: 36px;
+  padding: 16px 17px;
+  background-color: var(--bright-bg-transp);
+  border-radius: 20px;
+}
+
+.range-slider__fields {
+  position: absolute;
+  top: -30px;
+  left: 55px;
+  display: flex;
+  margin: 0;
+  align-items: baseline;
+}
+
+.range-slider__fields span {
+  flex-shrink: 0;
+}
+
+.range-slider__input {
+  box-sizing: content-box;
+  width: 3ch;
+  padding: 2px 4px;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  border: none;
+  border-radius: 4px;
+  appearance: none;
+}
+
+.range-slider__input::-webkit-outer-spin-button,
+.range-slider__input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.range-slider__input:hover {
+  background-color: var(--bright-bg-transp);
+}
+
+.range-slider__input:focus {
+  background-color: var(--bright-bg);
+}
+
+.range-slider__scale {
+  position: relative;
+  width: 164px;
+  height: 2px;
+  background-color: rgba(86, 92, 102, 0.3);
+  border-radius: 5px;
+}
+
+.range-slider__bar {
+  position: absolute;
+  left: 32px;
+  right: 60px;
+  height: 2px;
+  background-color: #565c66;
+}
+
+.range-slider__toggle {
+  position: absolute;
+  display: block;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  background-color: var(--bright-bg);
+  border: 6px solid var(--main-txt);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.range-slider__toggle--min {
+  top: -7px;
+  left: 0;
+  transform: translateX(-50%);
+}
+
+.range-slider__toggle--max {
+  top: -7px;
+  right: 0;
+  transform: translateX(50%);
+}
+
+.range-slider__toggle:hover {
+  background-color: var(--main-txt);
+  border-color: var(--bright-bg);
+}
+
+.range-slider__toggle:active {
+  background-color: var(--main-txt);
+  border-color: var(--main-txt);
+}
+
+.filters__label--radio {
+  position: relative;
+  padding-left: 24px;
+}
+
+.filters__label--radio::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 0;
+  left: 0;
+  border: 2px solid var(--main-txt);
+  border-radius: 8px;
+}
+
+.filters__radio:checked + .filters__label--radio::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  top: 5px;
+  left: 5px;
+  background-color: var(--main-txt);
+  border-radius: 3px;
+}
+
+.filters__label--checkbox {
+  position: relative;
+  padding-left: 24px;
+}
+
+.filters__label--checkbox::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 0;
+  left: 0;
+  background: no-repeat url("../images/icons/check-off.svg") center / 16px;
+}
+
+.filters__checkbox:checked + .filters__label--checkbox::before {
+  background-image: url("../images/icons/check-on.svg");
+}
+
+.filters__button {
+  align-self: flex-end;
+  flex-grow: 1;
+  max-width: 192px;
+  margin-left: auto;
+  margin-bottom: -1px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  font-size: 14px;
+  line-height: 20px;
+  background-color: var(--bright-bg-transp);
+  border: 2px solid var(--bright-bg);
+}
+
+.filters__button:hover {
+  background-color: var(--bright-bg);
+  border-color: var(--bright-bg-transp);
+}
+
+/* Сетка товаров каталога */
+.products__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
 .product {
   position: relative;
   width: 270px;
